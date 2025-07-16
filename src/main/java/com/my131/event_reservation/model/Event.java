@@ -26,7 +26,9 @@ public class Event {
     private String name;
 
     @Column(name = "event_date", nullable = false)
-    private LocalDateTime evnetDate;
+    private LocalDateTime eventDate;
+
+    private String location;
 
     @OneToMany(mappedBy = "event", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
