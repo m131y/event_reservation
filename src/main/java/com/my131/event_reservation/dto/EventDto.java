@@ -16,9 +16,11 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class EventDto {
 
+    // 요청 단계에서 null 필터링 (논리적 제약)
     @NotBlank(message = "이름을 입력해 주세요.")
     private String name;
 
+    // 요청 단계에서 null 필터링 (논리적 제약)
     @NotNull(message = "날짜를 입력해주세요.")
     private LocalDateTime eventDate;
 
